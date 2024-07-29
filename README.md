@@ -20,6 +20,7 @@ De asemenea, versiunile Python suportate sunt Python 3.8+.</p>
   
 <p>Firefox,de exemplu are nevoie de geckodriver.</p>
 
+
 ## Pachetul SeleniumBase
 
 ### Instalare
