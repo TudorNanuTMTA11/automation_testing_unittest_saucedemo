@@ -1,81 +1,50 @@
 # Sectiunea 1: Pachete de instalat
 
-## Pachetul Selenium
+## Introducere
 
-### Introducere
+Limbajul Python este legat de Selenium WebDriver. Pachetul selenium este folosit pentru interactiunea automata cu browserele web din Python.
 
-<p>Limbajul Python este legat de Selenium WebDriver. Pachetul selenium este folosit pentru interactiunea automata cu browserele web din Python.</p>
+Exista cateva browsere sau drivere care sunt suportate precum Firefox, Chrome si Internet Explorer la fel ca si protocolul Remote. De asemenea, versiunile Python suportate sunt Python 3.8
 
-<p>Exista cateva browsere sau drivere care sunt suportate precum Firefox, Chrome si Internet Explorer la fel ca si protocolul Remote.
-De asemenea, versiunile Python suportate sunt Python 3.8+.</p>
+## Instalare
 
-### Instalare
+Instalarea pachetelor se va face cu ajutorul utilitarului pip, care vine la pachet cu instalarea programului python, cu conditia ca la instalare sa se bifeze adaugarea acestuia la variabilele de mediu (environment variables).
 
-<p>Daca exista pip in sistem, pur si simplu se instaleaza sau actualizeaza legaturile cu Python prin comanda: pip install -U selenium. Ca si alternativa, se poate descarca distributia sursei din PyPI <https://pypi.org/project/selenium/#files>, apoi se dezarhiveaza si se ruleaza cu comanda: python setup.py install.</p>
+Drept mentiune suplimentara, pentru a crea medii izolate si securizate de Python, se poate lua in considerare utilizarea virtualenv.
 
-<p>Drept mentiune suplimentara, pentru a crea medii izolate si securizate de Python , se poate lua in considerare utilizarea virtualenv.</p>
+
+### Selenium
+
+Pentru interactiunea cu elementele web va fi necesara instalarea librariei selenium. Acest lucru se face folosind comanda **pip install -U selenium**. 
 
 ### Drivere
-<p>Selenium are nevoie de un driver pentru a interfata cu browserul ales. </p>
+Pentru a interactiona cu browserul, Selenium are nevoie de un driver care va fi instantiat prin intermediul clasei Driver, disponibila in libraria seleniumbase. 
+
+Driverul va putea fi specificat prin trimiterea numelui acestuia ca argument al constructorului clasei Driver, iar daca acesta nu este specificat se va trimite numele browserului implicit din sistemul pe care ruleaza codul.
+
+Libraria seleniumbase din care este importata clasa Driver se poate instala folosind comanda **pip install selenimbase**.
+
+
+### Libraria unittest
+
+Este o librarie predefinita in python, asa ca nu e necesar sa fie instalat altceva pentru a-l folosi, ci doar sa o importam prin comanda **import unittest**
+
+### Pachetul html-testRunner
+
+HtmlTest runner este un utilitar pentru executarea testelor care salveaza rezultatele  in fisiere html cu scopul prezentarii rezultatelor intr-un mod care poate fi citit cu usurinta.
+
+Pentru utilizare este nevoie de:
+- instalare: pip install html-testRunner
+- import: import HtmlTestRunner
   
-<p>Firefox,de exemplu are nevoie de geckodriver.</p>
 
 
-## Pachetul SeleniumBase
+## Clonarea si rularea proiectului
 
-### Instalare
+Pentru clonare putem sa ne folosim de comanda **git clone TudorNanuTMTA11/automation_testing_unittest_saucedemo**
 
-<p>SeleniumBase poate fi instalat din PyPi sau GitHub.</p>
+Pentru rularea proiectului se poate rula fisierul suita_teste.py astfel incat sa rulam toate testele, sau se poate rula cate un test individual din fisierul corespunzator, prin apasarea butonului verde aflat in stanga testului.
 
-<p>Cum se instaleaza SeleniumBase din PyPi, cu comanda pip install seleniumbase.</p>
-
-<p>Mai sunt si alte comenzi ce pot fi folosite pentru actualizari sau daca sunt folosite mai multe versiuni de Python, precum:
- (Add --upgrade OR -U to upgrade SeleniumBase.), (Add --force-reinstall to upgrade indirect packages.),
-  (Use pip3 if multiple versions of Python are present.).</p>
-
-<p> Cum se instaleaza seleniumbase dintr-o clona de GitHub</p>
-
-<p> Prin urmatoarea structura: </p> 
-
-<p> git clone https://github.com/seleniumbase/SeleniumBase.git
-
-  cd SeleniumBase/
-
-pip install -e . </p>
-
-<p> Cum se actualizeaza o instalare existenta dintr-o clona de GithHub</p>
-
-<p>Cu urmatoarea structura:</p>
-
-<p>git pull
-
-  pip install -e .</p>
-
-<p>Descarcarea webdriverelor</p>
-
-<p>SeleniumBase isi descarca automat webdriverele de care are nevoie, precum chromedriver</p>
-
-<p>SeleniumBase automat controleaza actiuni comune ale WebDriver precum lansarea browserelor web inainte de teste,salvarea capturilor
-
-de ecran in timpul esecurilor si inchiderea browserelor web dupa teste</p>
-
-## Pachetul unittest
-
-<p>Este un pachet ce este deja disponibil in libraria standard, asa ca nu e necesar sa fie instalat altceva pentru a-l folosi.</p>
-
-## Pachetul html-testRunner
-
-<p>HtmlTest runner este un rulator de teste al lui unittest care salveaza rezultatele testelor in fisiere html cu scopul prezentarii 
-
-rezultatelor intr-un mod care poate fi citit de om.</p>
-
-<p> Cum se foloseste</p>
-
-<p> Cu structura: 
-  
-  import HtmlTestRunner
-
-import unittest</p>
 
 # Sectiunea 2: Structura proiectului
 
