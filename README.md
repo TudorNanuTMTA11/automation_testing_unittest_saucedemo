@@ -1,33 +1,32 @@
-# Sectiunea 1: Pachete de instalat
+# Section 1: Packages to be installed
 
-## Introducere
+## Introduction
 
-Limbajul Python este legat de Selenium WebDriver. Pachetul selenium este folosit pentru interactiunea automata cu browserele web din Python.
+Python language is linked with Selenium WebDriver. Selenium package is used for automated interaction with web browsers from Python.
 
-Exista cateva browsere sau drivere care sunt suportate precum Firefox, Chrome si Internet Explorer la fel ca si protocolul Remote. De asemenea, versiunile Python suportate sunt Python 3.8
+There are some browsers or drivers which are suported such as Firefox, Chrome and Edge as same as Remote protocol.Furthermore, supported Python version Python are 3.8
 
-## Instalare
+## Installation
 
-Instalarea pachetelor se va face cu ajutorul utilitarului pip, care vine la pachet cu instalarea programului python, cu conditia ca la instalare sa se bifeze adaugarea acestuia la variabilele de mediu (environment variables).
+Packages installation are made with the help of pip utilitary , which comes at package with installation of python package , with the condition that at the installing to be ticked its addition at the environment variable).
 
-Drept mentiune suplimentara, pentru a crea medii izolate si securizate de Python, se poate lua in considerare utilizarea virtualenv.
+As additional note, for creating isolated and secured Python environments, take in consideration using virtualenv.
 
 
 ### Selenium
 
-Pentru interactiunea cu elementele web va fi necesara instalarea librariei selenium. Acest lucru se face folosind comanda **pip install -U selenium**. 
+For interaction with web elements it will be necessary installation of selenium library. This can be done by using the command  **pip install -U selenium**. 
 
-### Drivere
-Pentru a interactiona cu browserul, Selenium are nevoie de un driver care va fi instantiat prin intermediul clasei Driver, disponibila in libraria seleniumbase. 
+### Driver
+For interacting with the browser , Selenium needs a driver which will be instantiated through Driver class , available in seleniumbase library. 
 
-Driverul va putea fi specificat prin trimiterea numelui acestuia ca argument al constructorului clasei Driver, iar daca acesta nu este specificat se va trimite numele browserului implicit din sistemul pe care ruleaza codul.
+The driver will be specified through sending its name as argument of the Driver class constructor , if it is not specified it will be sent the name of the implicit browser from the system where the code is ruled.
+Seleniumbase library from where Driver class is imported can be installed by using the command  **pip install selenimbase**.
 
-Libraria seleniumbase din care este importata clasa Driver se poate instala folosind comanda **pip install selenimbase**.
 
+### Unittest library
 
-### Libraria unittest
-
-Este o librarie predefinita in python, asa ca nu e necesar sa fie instalat altceva pentru a-l folosi, ci doar sa o importam prin comanda **import unittest**
+It id a predefined library in python, so it is not necessary to be installed anything else to be used,only to import it through the command **import unittest**
 
 ### Pachetul html-testRunner
 
@@ -80,17 +79,17 @@ produs</p>
 
 interpreta rezultatele </p>
 
-# Sectiunea 4 : Deadline-uri(30.07.2024)
+# Section 4 : Deadlines(30.07.2024)
 
-<p> Implementare portofoliu personal:Deadline vizualizare curs video: Din ziua in care primesti acces pana in următoarea zi la final
+<p> Implementation of  personal portfolio:Deadline viewing  video course: From the day you get access until the final of the next day
 
   Deadline, 15.11.2024 </p>
 
 <p> Finalizare documentatie librarie unittest + eficientizare cod  -> 30.07.2024 </p>
 
-# Sectiunea 5: Descrierea testelor facute+ tipurile si tehnicile de testare folosite
+# Section 5: Description of the tests ruled+testing types and techniques used 
 
-<p> In fisierul de Python "login.py" au fost efectuate 4 teste. </p>
+<p> In Python file "login.py" there were ruled 4 tests. </p>
 
 <p> Tehnica de testare folosita este frameworkul unittest, transpusa in teste prin TestCase in cod, mai explicit cazuri de testare.</p>
 
