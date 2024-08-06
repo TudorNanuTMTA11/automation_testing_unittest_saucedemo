@@ -26,7 +26,7 @@ Seleniumbase library from where Driver class is imported can be installed by usi
 
 ### Unittest library
 
-It id a predefined library in python, so it is not necessary to be installed anything else to be used,only to import it through the command **import unittest**
+It is a predefined library in python, so it is not necessary to be installed anything else to be used,only to import it through the command **import unittest**
 
 ###  html-testRunner package
 
