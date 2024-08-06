@@ -36,8 +36,6 @@ For using the package it is necessary of:
 - installation: pip install html-testRunner
 - import: import HtmlTestRunner
   
-
-
 ## Project cloning and running
 
 For c;oning we can use the command  **git clone TudorNanuTMTA11/automation_testing_unittest_saucedemo**
@@ -47,7 +45,7 @@ For executing the test we can run the file suita_teste.py or we can run tests in
 
 # Section 2: Project structure
 
-<p> The project is composed of the following structure:</p>
+ The project is composed of the following structure:
 
 - root named "automation_testing_unittest_saucedemo
 - directory numit "reports" containing all the execution reports generated through running which have the following naming convention: Test Results_yyyy-mm-dd_hh-mm-ss.html
@@ -57,28 +55,24 @@ For executing the test we can run the file suita_teste.py or we can run tests in
 
 # Section 3 : Automation testing project objectives
 
-<p>Automation testing project has as foundation the site "https://www.saucedemo.com/", with the logo "SwagLabs".</p>
+Automation testing project has as foundation the site "https://www.saucedemo.com/", with the logo "SwagLabs".
 
-<p> The objectives are testing the login functionality which is realised with help of the positive testing, translated in login with valid credentials testing  </p>
+The objectives are testing the login functionality which is performed with the help of positive testing, negative testing and functional testing.
 
-<p> Furthermore, testing of inventory functionality, realised through positive testing, translated in testing of purchasing a item.</p>
+Furthermore, testing of the inventory functionality, was done through positive testing, negative testing and functional testing.
 
-<p> Also, designing a test suite and generating a html-type execution report, with scope of presenting and interpreting the results. </p>
+Also, the purpose of the project was designing a test suite and generating a html-type execution report, with the scope of presenting and interpreting the results. 
 
-# Section 4 : Deadlines(30.07.2024)
+# Section 4 : Deadlines 
 
-<p> Implementation of  personal portfolio:Deadline viewing  video course: From the day you get access until the final of the next day
+The accepted deadline for finalising all the testing for the website in scope was 15.08.2024.
+Until then, all testing must be performed, all reports must be generated.
+The scope of this project was purely an automation one, and no defect management activities were done. For defect identification I created a separate manual testing project which covers this type of testing activities. 
 
-  Deadline, 15.11.2024 </p>
 
-<p> Finalizare documentatie librarie unittest + eficientizare cod  -> 30.07.2024 </p>
+# Section 5: Description of the tests that were performed + testing types and techniques used 
 
-# Section 5: Description of the tests ruled+testing types and techniques used 
+All the tests that were performed that were created in the unittest framework using positive testing, negative testing and functional testing.
 
-<p> In Python file "login.py" there were ruled 4 tests. </p>
-
-<p> The test technique used is unittest framework, implemented in tests through TestCase in code, concretely test cases.</p>
-
-<p> First test is to check the login with valid credentials, it is positive testing , </p>
-
+All the tests that were created were passed during the test execution phase.
  
