@@ -28,56 +28,50 @@ Seleniumbase library from where Driver class is imported can be installed by usi
 
 It id a predefined library in python, so it is not necessary to be installed anything else to be used,only to import it through the command **import unittest**
 
-### Pachetul html-testRunner
+###  html-testRunner package
 
-HtmlTest runner este un utilitar pentru executarea testelor care salveaza rezultatele  in fisiere html cu scopul prezentarii rezultatelor intr-un mod care poate fi citit cu usurinta.
+HtmlTest runner is a utilitary for executing the tests which save the results in html files with the objective of the presenting of the results in a easy-readable way scopul.
 
-Pentru utilizare este nevoie de:
-- instalare: pip install html-testRunner
+For using the package it is necessary of:
+- installation: pip install html-testRunner
 - import: import HtmlTestRunner
   
 
 
-## Clonarea si rularea proiectului
+## Project cloning and running
 
-Pentru clonare putem sa ne folosim de comanda **git clone TudorNanuTMTA11/automation_testing_unittest_saucedemo**
+For c;oning we can use the command  **git clone TudorNanuTMTA11/automation_testing_unittest_saucedemo**
 
-Pentru rularea proiectului se poate rula fisierul suita_teste.py astfel incat sa rulam toate testele, sau se poate rula cate un test individual din fisierul corespunzator, prin apasarea butonului verde aflat in stanga testului.
+For running the project it can be runned the file  suita_teste.py ,in this way all the tests are runned or it can be runned a individual test from the appropiate file through clicking the green button located in the left side of the test. 
 
 
-# Sectiunea 2: Structura proiectului
+# Section 2: Project structure
 
-<p> Proiectul ,al carui nume este "ProiectFinal" se compune din:</p>
+<p> The project ,which has the name "ProiectFinal is composed of:</p>
 
-<p> Directoryul numit "ProiectFinal"</p>
+<p> Directory named "ProiectFinal"</p>
 
-<p> Directoryul numit "reports"</p>
+<p> Directory numit "reports"</p>
 
-<p> In cadrul directoryului "reports" se gaseste fisierul html "Test Results_2024-06-24_14-38-05.html</p>
+<p> In the structure of the directory "reports" there is the html file "Test Results_2024-06-24_14-38-05.html</p>
 
-<p> Fisierul de tip Python "___init__.py"</p>
+<p> Python file"___init__.py"</p>
 
-<p> Fisierul de tip Python "inventory.py"</p>
+<p> Python file "inventory.py"</p>
 
-<p> Fisierul de tip Python "login.py"</p>
+<p>  Python file "login.py"</p>
 
-<p> Fisierul de tip Python "suita_teste.py"</p>
+<p>  Python file "suita_teste.py"</p>
 
-# Sectiunea 3 : Obiectivele proiectului de testare automata
+# Section 3 : Automation testing project objectives
 
-<p> Proiectul de testare automata are ca si baza site-ul "https://www.saucedemo.com/", cu logo-ul "SwagLabs".</p>
+<p>Automation testing project has as foundation the site "https://www.saucedemo.com/", with the logo "SwagLabs".</p>
 
-<p> Drept obiective,sunt testarea functionalitatii de logare,care se atinge prin testarea pozitiva,adica testarea logarii cu credentiale 
+<p> The objectives are testing the login functionality which is realised with help of the positive testing, translated in login with valid credentials testing  </p>
 
-  valide </p>
+<p> Furthermore, testing of inventory functionality, realised through positive testing, translated in testing of purchasing a item.</p>
 
-<p> De asemenea, testarea functionalitatii de inventory, de asemenea atinsa prin testare pozitiva,adica testarea achizitionarii unui
-
-produs</p>
-
-<p> Precum si crearea unei suite de teste dar si generarea unui raport de executie de tip html, cu scopul de a prezenta si 
-
-interpreta rezultatele </p>
+<p> Also, designing a test suite and generating a html-type execution report, with scope of presenting and interpreting the results. </p>
 
 # Section 4 : Deadlines(30.07.2024)
 
@@ -91,8 +85,8 @@ interpreta rezultatele </p>
 
 <p> In Python file "login.py" there were ruled 4 tests. </p>
 
-<p> Tehnica de testare folosita este frameworkul unittest, transpusa in teste prin TestCase in cod, mai explicit cazuri de testare.</p>
+<p> The test technique used is unittest framework, implemented in tests through TestCase in code, concretely test cases.</p>
 
-<p> Primul test este de a verifica logarea cu credentiale valide, este testare pozitiva, </p>
+<p> First test is to check the login with valid credentials, it is positive testing , </p>
 
  
