@@ -20,7 +20,7 @@ For interaction with web elements it will be necessary installation of selenium 
 ### Driver
 For interacting with the browser , Selenium needs a driver which will be instantiated through Driver class , available in seleniumbase library. 
 
-The driver will be specified through sending its name as argument of the Driver class constructor , if it is not specified it will be sent the name of the implicit browser from the system where the code is ruled.
+The driver will be specified through sending its name as argument of the Driver class constructor , if it is not specified it will be sent the name of the implicit browser from the system where the code is run.
 Seleniumbase library from where Driver class is imported can be installed by using the command  **pip install selenimbase**.
 
 
