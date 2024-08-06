@@ -42,26 +42,18 @@ For using the package it is necessary of:
 
 For c;oning we can use the command  **git clone TudorNanuTMTA11/automation_testing_unittest_saucedemo**
 
-For running the project it can be runned the file  suita_teste.py ,in this way all the tests are runned or it can be runned a individual test from the appropiate file through clicking the green button located in the left side of the test. 
+For executing the test we can run the file suita_teste.py or we can run tests individually from the appropiate file through clicking the green button located in the left side of the test. 
 
 
 # Section 2: Project structure
 
-<p> The project ,which has the name "ProiectFinal is composed of:</p>
+<p> The project is composed of the following structure:</p>
 
-<p> Directory named "ProiectFinal"</p>
-
-<p> Directory numit "reports"</p>
-
-<p> In the structure of the directory "reports" there is the html file "Test Results_2024-06-24_14-38-05.html</p>
-
-<p> Python file"___init__.py"</p>
-
-<p> Python file "inventory.py"</p>
-
-<p>  Python file "login.py"</p>
-
-<p>  Python file "suita_teste.py"</p>
+- root named "automation_testing_unittest_saucedemo
+- directory numit "reports" containing all the execution reports generated through running which have the following naming convention: Test Results_yyyy-mm-dd_hh-mm-ss.html
+- inventory.py -> test file covering the validation of the inventory page
+- login.py -> test file covering the validation of the login page
+- suita_teste.py -> test automation suite containing references to all the tests that were created
 
 # Section 3 : Automation testing project objectives
 
