@@ -7,7 +7,7 @@ class Shopping(TestCase):
     SHOPPING_CART_LINK = (By.CLASS_NAME, 'shopping_cart_link')
     CHECKOUT_BTN = (By.ID, 'checkout')
     ADD_TO_CART_BTN = (By.XPATH, '//button[contains(text(),"Add to cart")]')
-    REMOVE_SAUCE_LABS_BACKPACK_BTN_INPUT = (By.XPATH, '/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[2]/button')
+    REMOVE_SAUCE_LABS_BACKPACK_BTN_INPUT = (By.ID,'remove-sauce-labs-backpack')
     SWAG_LABS_LOGO = (By.XPATH, '//*[@class = "app_logo"]')
     PRODUCT_SORT_CONTAINER = (By.XPATH, '//*[@class= "product_sort_container"]')
     INVENTORY_ITEM_PRICE = (By.XPATH, '//*[@class = "inventory_item_price"]')
@@ -26,8 +26,6 @@ class Shopping(TestCase):
               self.chrome.find_element(*self.SHOPPING_CART_LINK).click()
               self.chrome.find_element(*self.CHECKOUT_BTN).click()
 
-    def test_click_remove_sauce_labs_backpack(self):
-            self.chrome.find_element(*self.REMOVE_SAUCE_LABS_BACKPACK_BTN_INPUT).click()
 
     def test_swag_labs_logo_is_displayed(self):
             app_logo = self.chrome.find_element(*self.SWAG_LABS_LOGO).text
@@ -43,5 +41,7 @@ class Shopping(TestCase):
                     product_price_list[i + 1].text.replace("$", "")):
                 in_product_price_list_sorted = False
         assert in_product_price_list_sorted == True
+
+        self.chrome.find_element(*self.REMOVE_SAUCE_LABS_BACKPACK_BTN_INPUT).click()
 
 

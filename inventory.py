@@ -14,7 +14,7 @@ class Test_Inventory(TestCase):
     INVENTORY_ITEM_NAME = (By.XPATH, '//*[@class = "inventory_item_name"]')
     SHOPPING_CART_CONTAINER_SAUCE_LABS_BACKPACK = (By.XPATH, '//*[@class = "shopping_cart_container"]')
     SHOPPING_CART_LINK = (By.CLASS_NAME, 'shopping_cart_link')
-    REMOVE_SAUCE_LABS_BACKPACK_BTN_INPUT = (By.XPATH, '/html/body/div/div/div/div[2]/div/div/div/div[1]/div[2]/div[2]/button')
+    REMOVE_SAUCE_LABS_BACKPACK_BTN_INPUT = (By.XPATH, '//button[@class="btn btn_secondary btn_small btn_inventory')
     SWAG_LABS_LOGO = (By.XPATH,'//*[@class = "app_logo"]')
     CHECKOUT_BTN = (By.ID,'checkout')
     FIRST_NAME = (By.ID, 'first-name')
@@ -88,11 +88,11 @@ class Test_Inventory(TestCase):
         assert in_product_name_list_sorted == True
 
     def test_click_remove_sauce_labs_backpack(self):
-            self.chrome.find_element(*self.REMOVE_SAUCE_LABS_BACKPACK_BTN_INPUT).click()
+        self.chrome.find_element(*self.REMOVE_SAUCE_LABS_BACKPACK_BTN_INPUT).click()
 
     def test_swag_labs_logo_is_displayed(self):
-            app_logo = self.chrome.find_element(*self.SWAG_LABS_LOGO).text
-            self.assertEqual(app_logo, 'Swag Labs', 'The logo shown is incorrect')
+        app_logo = self.chrome.find_element(*self.SWAG_LABS_LOGO).text
+        self.assertEqual(app_logo, 'Swag Labs', 'The logo shown is incorrect')
 
     def test_click_add_product_to_cart(self):
         self.chrome.find_elements(*self.ADD_TO_CART_BTN)[0].click()
