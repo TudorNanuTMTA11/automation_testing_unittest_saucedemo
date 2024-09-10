@@ -9,3 +9,5 @@ Feature: Check that the login button in the SauceDemo website is working properl
 
       Examples:
         |password  |error_message|
+        |secret_sauce1|Epic sadface: Username and password do not match any user in this service|
+        |secret_sauc  |Epic sadface: Username and password do not match any user in this service|
