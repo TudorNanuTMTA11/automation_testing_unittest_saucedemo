@@ -2,6 +2,7 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 import logging
+from Pages.inventory_page import Inventory_page
 
 class Browser:
     s = Service(ChromeDriverManager().install())
