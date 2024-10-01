@@ -19,10 +19,10 @@ class Inventory_page(Browser):
 
 
 
-    def insert_username(self):
+    def insert_username(self, username):
         try:
             user_name= self.chrome.find_element(*self.USER_NAME)
-            user_name.send_keys("standard_user")
+            user_name.send_keys(username)
         except Exception as i:
             logging.error(f"An error occurred while inserting the username : {str(i)}")
 
