@@ -35,6 +35,10 @@ def step_impl(context):
 def step_impl(context):
     context.main_page.i_click_on_the_option_name_Z_to_A()
 
+@when('I look on the front of the main page')
+def step_impl(context):
+    context.main_page.the_logo_is_displayed()
+
 @when ('I click on the option Add to cart')
 def step_impl(context):
     context.main_page.i_click_on_the_add_to_cart_button()
@@ -46,6 +50,67 @@ def step_impl(context):
 @then ('The product is removed from cart')
 def step_impl(context):
     context.main_page.the_product_is_removed_from_cart()
+
+@when('I click on the shopping cart icon')
+def step_impl(context):
+    context.main_page.the_product_is_added_to_cart()
+
+@when('I click on checkout button')
+def step_impl(context):
+    context.main_page.i_click_on_the_checkout_button()
+
+@when('I introduce the first name')
+def step_impl(context):
+    context.main_page.the_first_name_is_inserted()
+
+@when('I introduce the last name')
+def step_impl(context):
+    context.main_page.the_last_name_is_inserted()
+
+@when('I introduce the zip/postal code')
+def step_impl(context):
+    context.main_page.the_postal_code_is_inserted()
+
+@when ('I click on the continue button')
+def step_impl(context):
+    context.main_page.i_click_on_the_continue_button()
+@when ('I click on the finish button')
+def step_impl(context):
+    context.main_page.i_click_on_the_finish_button()
+@then ('I click on back to products button')
+def step_impl(context):
+    context.main_page.i_click_on_the_back_to_products_button()
+
+@then('I am redirected back to the main page')
+def step_impl(context):
+    context.main_page.i_click_on_the_back_to_products_button()
+
+@when ('I do not introduce the first name')
+def step_impl(context):
+    context.main_page.the_message_error_first_name_is_required_is_shown()
+@when ('I do not introduce the last name')
+def step_impl(context):
+    context.main_page.the_message_error_last_name_is_required_is_shown()
+@when ('I do not introduce the zip/postal code ')
+def step_impl(context):
+    context.main_page.the_message_error_postal_code_is_required_is_shown()
+
+@then('I receive a error')
+def step_impl(context):
+    context.main_page.the_message_error_first_name_is_required_is_shown()
+
+@when('I click on the continue shopping button')
+def step_impl(context):
+    context.main_page.i_click_on_the_continue_shopping_button()
+
+@when('I click on the cancel button')
+def step_impl(context):
+    context.main_page.i_click_on_the_cancel_button()
+
+@then('I am redirected to the cart page')
+def step_impl(context):
+    context.main_page.i_click_on_the_cancel_button()
+
 
 
 
