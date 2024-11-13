@@ -48,7 +48,7 @@ Feature: Check if I can use properly the website
         When I click on checkout button
         When I introduce the first name
         When I introduce the last name
-       When I imtroduce the zip/postal code
+       When I introduce the zip/postal code
        When I click on the continue button
         When I click on the finish button
         Then I click on back to products button
