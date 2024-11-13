@@ -1,13 +1,14 @@
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.service import Service
-import logging
-from Pages.inventory_page import Inventory_page
+
+
 
 class Browser:
-    s = Service(ChromeDriverManager().install())
-    chrome = webdriver.Chrome(service=s)
-    logging.basicConfig(level=logging.INFO)
+    options = webdriver.ChromeOptions()
+    options.add_argument("--disable-search-engine-choice-screen")
+    options.add_argument("--ignore-certificate-error")
+    options.add_argument("--ignore-ssl-errors")
+    chrome = webdriver.Chrome(options=options)
+
 
     def maximise_windows(self):
         self.chrome.maximize_window()
