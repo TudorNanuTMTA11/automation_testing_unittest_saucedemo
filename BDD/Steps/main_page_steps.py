@@ -31,6 +31,10 @@ def step_impl(context):
 def step_impl(context):
     context.main_page.i_click_on_the_option_name_A_to_Z()
 
+@when('I click the option Name(Z to A)')
+def step_impl(context):
+    context.main_page.i_click_on_the_option_name_Z_to_A()
+
 @when('Items are sorted from Z to A')
 def step_impl(context):
     context.main_page.i_click_on_the_option_name_Z_to_A()
@@ -55,6 +59,10 @@ def step_impl(context):
 def step_impl(context):
     context.main_page.the_product_is_added_to_cart()
 
+@when('I click on remove button')
+def step_impl(context):
+    context.main_page.i_click_on_the_remove_button()
+
 @when('I click on checkout button')
 def step_impl(context):
     context.main_page.i_click_on_the_checkout_button()
@@ -70,6 +78,15 @@ def step_impl(context):
 @when('I introduce the zip/postal code')
 def step_impl(context):
     context.main_page.the_postal_code_is_inserted()
+
+@when('I introduce only the first and last name')
+def step_impl(context):
+    context.main_page.the_message_error_postal_code_is_required_is_shown()
+
+
+@when('I do not introduce the zip/postal code')
+def step_impl(context):
+    context.main_page.the_message_error_postal_code_is_required_is_shown()
 
 @when ('I click on the continue button')
 def step_impl(context):
@@ -95,6 +112,10 @@ def step_impl(context):
 def step_impl(context):
     context.main_page.the_message_error_postal_code_is_required_is_shown()
 
+@when('I introduce only the first name')
+def step_impl(context):
+    context.main_page.the_message_error_last_name_is_required_is_shown()
+
 @then('I receive a error')
 def step_impl(context):
     context.main_page.the_message_error_first_name_is_required_is_shown()
@@ -111,6 +132,21 @@ def step_impl(context):
 def step_impl(context):
     context.main_page.i_click_on_the_cancel_button()
 
+@then('Items are sorted from A to Z')
+def step_impl(context):
+    context.main_page.i_click_on_the_option_name_A_to_Z()
+
+@then('Items are sorted from Z to A')
+def step_impl(context):
+    context.main_page.i_click_on_the_option_name_Z_to_A()
+
+@then('I see the website logo displayed')
+def step_impl(context):
+    context.main_page.the_logo_is_displayed()
+
+@then('The item is removed from cart')
+def step_impl(context):
+    context.main_page.the_product_is_removed_from_cart()
 
 
 
