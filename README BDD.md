@@ -42,37 +42,72 @@ For executing the tests we can write in console behave -f html -o test-report.ht
 The project is composed of the following structure:
 
 root named "automation_testing_unittest_saucedemo
+
 directory named "BDD"
+
 directory named "Features"
+
 directory named "Pages"
+
 directory named "Steps"
+
 saucedemo_login_button.feature.py -> test file contains feature, tests which are structured as: scenario outline/scenario, given, when, then
+
 for login into the website function
+
 saucedemo_main_page.feature.py -> test file contains feature, tests which are structured as: scenario outline/scenario, given, when, then
+
 for realising different purchases
-inventory_page.py -> contains methods and functions which are used for allowing the tests for accesing the website to work and a class which contains the speciffic selectors
-main_page.py -> contains methods and functions which are used for allowing the tests for purchasing items to work and a class which contains the speciffic selectors
-login_button_steps.py -> contains the steps which are defined in features designed for accesing the website and then for generate the test report in html format
-main_page_steps.py -> contains the steps which are defined in features designed for using the website principal page and then for generate the test report in html format
+
+inventory_page.py -> contains methods and functions which are used for allowing the tests for accesing the website to work and a class 
+
+which contains the speciffic selectors
+
+main_page.py -> contains methods and functions which are used for allowing the tests for purchasing items to work and a class which 
+
+contains the speciffic selectors
+
+login_button_steps.py -> contains the steps which are defined in features designed for accesing the website and then for generate the 
+
+test report in html format
+
+main_page_steps.py -> contains the steps which are defined in features designed for using the website principal page and then for 
+
+generate the test report in html format
+
 behave.ini -> file for enabling Ini plugin
+
 browser.py -> file for accessing the browser
+
 environment.py -> file for designing the framework
+
 test-report.html -> file for accesing the report in browser
 
 # Section 3 : Automation testing project objectives
 Automation testing project has as foundation the site "https://www.saucedemo.com/", with the logo "SwagLabs".
 
-The objectives are testing the login functionality which is performed with the help of positive testing, negative testing and functional testing.
+The objectives are testing the login functionality which is performed with the help of positive testing, negative testing and functional 
+
+testing.
 
 Furthermore, testing of the inventory functionality, was done through positive testing, negative testing and functional testing.
 
-Also, the purpose of the project was creating .py files and generating a html-type execution report, with the scope of presenting and interpreting the results.
+Also, the purpose of the project was creating .py files and generating a html-type execution report, with the scope of presenting and 
+
+interpreting the results.
 
 # Section 4 : Deadlines
-The accepted deadline for finalising all the testing for the website in scope was 15.09.2024. Until then, all testing must be performed, all reports must be generated. The scope of this project was purely an automation one, and no defect management activities were done. For defect identification I created a separate manual testing project which covers this type of testing activities.
+The accepted deadline for finalising all the testing for the website in scope was 15.09.2024. Until then, all testing must be performed, 
+
+all reports must be generated. The scope of this project was purely an automation one, and no defect management activities were done. 
+
+For defect identification I created a separate manual testing project which covers this type of testing activities.
 
 # Section 5: Description of the tests that were performed + testing types and techniques used
-All the tests that were performed that were created in the unittest framework using positive testing, negative testing and functional testing.
+
+All the tests that were performed that were created in the unittest framework using positive testing, negative testing and functional 
+
+testing.
 
 All the tests that were created were passed during the test execution phase.
 
