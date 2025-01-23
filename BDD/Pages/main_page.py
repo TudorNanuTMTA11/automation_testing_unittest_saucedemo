@@ -1,6 +1,4 @@
-from time import sleep
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common import NoAlertPresentException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
@@ -8,12 +6,13 @@ import logging
 
 from browser import Browser
 
+
 class Main_page(Browser):
     PRODUCT_SORT_CONTAINER = (By.XPATH, '//*[@class= "product_sort_container"]')
     INVENTORY_ITEM_PRICE = (By.XPATH, '//*[@class = "inventory_item_price"]')
     INVENTORY_ITEM_NAME = (By.XPATH, '//*[@class = "inventory_item_name"]')
-    ADD_TO_CART_BTN = (By.XPATH, '//button[contains(text(),"Add to cart")]')
-    SHOPPING_CART_LINK = (By.CLASS_NAME, 'shopping_cart_link')
+    ADD_TO_CART_BTN = (By.ID, 'add-to-cart-sauce-labs-backpack')
+    SHOPPING_CART_CONTAINER = (By.CLASS_NAME, 'shopping_cart_link')
     REMOVE_SAUCE_LABS_BACKPACK_BTN_INPUT = (By.XPATH, '//button[@class="btn btn_secondary btn_small btn_inventory')
     SWAG_LABS_LOGO = (By.XPATH, '//*[@class = "app_logo"]')
     CHECKOUT_BTN = (By.ID, 'checkout')
@@ -34,16 +33,14 @@ class Main_page(Browser):
 
     def i_click_on_the_sort_button(self):
         try:
-            sort_items = self.chrome.find_element(*self.PRODUCT_SORT_CONTAINER)
-            sort_items.click()
+            sort_items = self.chrome.find_element(*self.PRODUCT_SORT_CONTAINER).click()
             logging.info('The sorting options were successfully shown on the tab')
         except Exception as e:
             logging.error(f'An error occurred while showing the sort options : {str(e)}')
 
     def i_click_on_the_option_price_low_to_high(self):
         try:
-            sort_items = self.chrome.find_element(*self.INVENTORY_ITEM_PRICE)
-            sort_items.click()
+            sort_items = self.chrome.find_element(*self.INVENTORY_ITEM_PRICE).click()
             logging.info('The items were successfully sorted from low price to high price')
         except Exception as e:
             logging.error(f'An error occurred while sorting the items prices : {str(e)}')
@@ -58,8 +55,7 @@ class Main_page(Browser):
 
     def i_click_on_the_option_price_high_to_low(self):
         try:
-            sort_items = self.chrome.find_element(*self.INVENTORY_ITEM_PRICE)
-            sort_items.click()
+            sort_items = self.chrome.find_element(*self.INVENTORY_ITEM_PRICE).click()
             logging.info('The items were successfully sorted from high price to low price')
         except Exception as e:
             logging.error(f'An error occurred while sorting the items prices : {str(e)}')
@@ -74,8 +70,7 @@ class Main_page(Browser):
 
     def i_click_on_the_option_name_A_to_Z(self):
         try:
-            sort_items = self.chrome.find_element(*self.INVENTORY_ITEM_NAME)
-            sort_items.click()
+            sort_items = self.chrome.find_element(*self.INVENTORY_ITEM_NAME).click()
             logging.info('The items were successfully sorted from A to Z')
         except Exception as e:
             logging.error(f'An error occurred while sorting the items names : {str(e)}')
@@ -90,8 +85,7 @@ class Main_page(Browser):
 
     def i_click_on_the_option_name_Z_to_A(self):
         try:
-            sort_items = self.chrome.find_element(*self.INVENTORY_ITEM_NAME)
-            sort_items.click()
+            sort_items = self.chrome.find_element(*self.INVENTORY_ITEM_NAME).click()
             logging.info('The items were successfully sorted from Z to A')
         except Exception as e:
             logging.error(f'An error occurred while sorting the items names : {str(e)}')
@@ -114,20 +108,17 @@ class Main_page(Browser):
 
     def i_click_on_the_add_to_cart_button(self):
         try:
-            add_to_cart = self.chrome.find_element(*self.ADD_TO_CART_BTN)
-            add_to_cart.click()
+            add_to_cart = self.chrome.find_element(*self.ADD_TO_CART_BTN).click()
             logging.info('The item was added to cart')
         except Exception as e:
             logging.error(f'An error occurred while adding the item to cart : {str(e)}')
 
     def i_click_on_the_remove_button(self):
         try:
-            add_to_cart = self.chrome.find_element(*self.REMOVE_SAUCE_LABS_BACKPACK_BTN_INPUT)
-            add_to_cart.click()
+            add_to_cart = self.chrome.find_element(*self.REMOVE_SAUCE_LABS_BACKPACK_BTN_INPUT).click()
             logging.info('The item was removed from cart')
         except Exception as e:
             logging.error(f'An error occurred while removing the item from cart : {str(e)}')
-
 
     def the_product_is_removed_from_cart(self):
         try:
@@ -139,55 +130,49 @@ class Main_page(Browser):
 
     def the_product_is_added_to_cart(self):
         try:
-            added_to_cart = self.chrome.find_element(*self.SHOPPING_CART_LINK)
-            added_to_cart.click()
+            added_to_cart = self.chrome.find_element(*self.SHOPPING_CART_CONTAINER).click()
             logging.info('The user is redirected to cart page')
         except Exception as t:
             logging.error(f'An error occurred while being redirected to the cart page : {str(t)}')
 
     def i_click_on_the_checkout_button(self):
         try:
-            checkout_btn = self.chrome.find_element(*self.CHECKOUT_BTN)
-            checkout_btn.click()
+            checkout_btn = self.chrome.find_element(*self.CHECKOUT_BTN).click()
             logging.info('The user is redirecting to the details page')
         except Exception as e:
             logging.error(f'An error occurred while being redirected to the details page : {str(e)}')
+
     def the_first_name_is_inserted(self):
         try:
-            first_name = self.chrome.find_element(*self.FIRST_NAME)
-            first_name.send_keys()
+            first_name = self.chrome.find_element(*self.FIRST_NAME).send_keys()
             logging.info('The first name is inserted')
         except Exception as t:
-            logging.error(f'An error occurred while inserting the first name : {str(t)}')
+            logging.error(f'An error occurred while using the first name : {str(t)}')
 
     def the_last_name_is_inserted(self):
         try:
-            last_name = self.chrome.find_element(*self.LAST_NAME)
-            last_name.send_keys()
+            last_name = self.chrome.find_element(*self.LAST_NAME).send_keys()
             logging.info('The last name is inserted')
         except Exception as t:
-            logging.error(f'An error occurred while inserting the last name : {str(t)}')
+            logging.error(f'An error occurred while using the last name : {str(t)}')
 
     def the_postal_code_is_inserted(self):
         try:
-            postal_code = self.chrome.find_element(*self.POSTAL_CODE)
-            postal_code.send_keys()
+            postal_code = self.chrome.find_element(*self.POSTAL_CODE).send_keys()
             logging.info('The postal code is inserted')
         except Exception as t:
-            logging.error(f'An error occurred while inserting the postal code : {str(t)}')
+            logging.error(f'An error occurred while using the postal code : {str(t)}')
 
     def i_click_on_the_continue_button(self):
         try:
-            continue_btn = self.chrome.find_element(*self.CONTINUE_BTN)
-            continue_btn.click()
+            continue_btn = self.chrome.find_element(*self.CONTINUE_BTN).click()
             logging.info('The shopping procedure continues')
         except Exception as e:
             logging.error(f'An error occurred while clicking the continue button : {str(e)}')
 
     def i_click_on_the_finish_button(self):
         try:
-            finish_btn = self.chrome.find_element(*self.FINISH_BTN)
-            finish_btn.click()
+            finish_btn = self.chrome.find_element(*self.FINISH_BTN).click()
             logging.info('The shopping procedure is finished')
         except Exception as e:
             logging.error(f'An error occurred while finishing the shopping procedure: {str(e)}')
@@ -203,50 +188,55 @@ class Main_page(Browser):
 
     def i_click_on_the_back_to_products_button(self):
         try:
-            back_to_products_btn = self.chrome.find_element(*self.BACK_TO_PRODUCTS)
-            back_to_products_btn.click()
+            back_to_products_btn = self.chrome.find_element(*self.BACK_TO_PRODUCTS).click()
             logging.info('The user is redirected back to the main page')
         except Exception as e:
             logging.error(f'An error occurred while being redirected back to the main page: {str(e)}')
 
     def i_click_on_the_remove_product_button(self):
         try:
-            remove_product_btn = self.chrome.find_element(*self.REMOVE_PRODUCT)
-            remove_product_btn.click()
+            remove_product_btn = self.chrome.find_element(*self.REMOVE_PRODUCT).click()
             logging.info('The product is removed')
         except Exception as e:
             logging.error(f'An error occurred while removing the product from cart: {str(e)}')
 
     def i_click_on_the_continue_shopping_button(self):
         try:
-            continue_shopping_btn = self.chrome.find_element(*self.CONTINUE_SHOPPING_BTN)
-            continue_shopping_btn.click()
+            continue_shopping_btn = self.chrome.find_element(*self.CONTINUE_SHOPPING_BTN).click()
             logging.info('The shopping procedure is continued')
         except Exception as e:
             logging.error(f'An error occurred while continuing the shopping procedure: {str(e)}')
 
-
     def i_click_on_the_cancel_button(self):
         try:
-            cancel_btn = self.chrome.find_element(*self.CANCEL_BTN)
-            cancel_btn.click()
+            cancel_btn = self.chrome.find_element(*self.CANCEL_BTN).click()
             logging.info('Buying procedure is cancelled')
         except Exception as e:
             logging.error(f'An error occurred while cancelling the buying procedure {str(e)}')
 
+    def error_message_is_displayed(self, expected_error_message):
+            error_message = (WebDriverWait(self.chrome, 10).
+                              until(EC.visibility_of_element_located(self.ERROR_FIRST_NAME_MESSAGE)))
+            assert error_message.is_displayed()
+            assert error_message.text == expected_error_message, (f"An error occurred. Expected error message {expected_error_message}",
+                                                             f"Actual error message {error_message.text}")
+
     def the_message_error_first_name_is_required_is_shown(self):
         try:
             error_first_name = (WebDriverWait(self.chrome, 10).
-                              until(EC.visibility_of_element_located(self.ERROR_FIRST_NAME_MESSAGE)))
+                            until(EC.visibility_of_element_located(self.ERROR_FIRST_NAME_MESSAGE)))
             assert error_first_name.is_displayed()
             logging.info('The error message first name is required is displayed')
         except Exception as l:
             logging.error(f"An error occurred while displaying the error message first name is required : {str(l)}")
 
+
+
+
     def the_message_error_last_name_is_required_is_shown(self):
         try:
             error_last_name = (WebDriverWait(self.chrome, 10).
-                              until(EC.visibility_of_element_located(self.ERROR_LAST_NAME_MESSAGE)))
+                            until(EC.visibility_of_element_located(self.ERROR_LAST_NAME_MESSAGE)))
             assert error_last_name.is_displayed()
             logging.info('The error message last name is required is displayed')
         except Exception as l:
@@ -260,11 +250,3 @@ class Main_page(Browser):
             logging.info('The error message postal code is required is displayed')
         except Exception as l:
             logging.error(f"An error occurred while displaying the error message postal code is required : {str(l)}")
-
-
-
-
-
-
-
-
