@@ -1,4 +1,7 @@
 Feature: Check if I can use properly the website
+  Background:
+    Given I am logged in to the website with the username "standard_user" and password "secret_sauce"
+
   @T5 @positiveTesting
     Scenario: I want to sort the items from low price to high price
     When I click on the sort button
@@ -32,9 +35,8 @@ Feature: Check if I can use properly the website
 
   @T11 @positiveTesting
   Scenario: I want to buy a product from the website
-    When I introduce the first name
-    When I introduce the last name
-    When I introduce the zip/postal code
+    When I introduce the first and last name, "Tudor" and "Nanu"
+    When I introduce the zip/postal code "810009"
     When I click on the continue button
     When I click on the finish button
     Then I click on back to products button
@@ -47,21 +49,30 @@ Feature: Check if I can use properly the website
 
   @T13 @negativeTesting
   Scenario: I want to buy a product from the website but without inserting the details
-    When I do not introduce the first name
-    When I do not introduce the last name
-    When I do not introduce the zip/postal code
-    Then I receive a error "Epic sadface: Password is required"
+    When I click on the option Add to cart
+    When I click on the shopping cart icon
+    When I click on checkout button
+    When I click on the continue button
+    Then I receive "first_name_is_required" error "Error: First Name is required"
+
 
   @T14 @negativeTesting
   Scenario: I want to buy a product from the website but only inserting the first name
-    When I introduce only the first name
-    Then I receive a error "Epic sadface: Password is required"
+    When I click on the option Add to cart
+    When I click on the shopping cart icon
+    When I click on checkout button
+    When I introduce the first name "Tudor"
+    When I click on the continue button
+    Then I receive "last_name_is_required" error "Error: Last Name is required"
 
   @T15 @negativeTesting
   Scenario: I want to buy a product from the website but only inserting the first and last name
+    When I click on the option Add to cart
+    When I click on the shopping cart icon
     When I click on checkout button
-    When I introduce only the first and last name
+    When I introduce the first and last name, "Tudor" and "Nanu"
     When I click on the continue button
+    Then I receive "postal_code_is_required" error "Error: Postal Code is required"
 
 
   @T16 @positiveTesting

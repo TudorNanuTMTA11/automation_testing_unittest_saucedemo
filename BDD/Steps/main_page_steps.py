@@ -1,12 +1,15 @@
+from time import sleep
+
 from behave import *
 
 
 @given('I am logged in to the website with the username "{username}" and password "{user_password}"')
 def step_impl(context, username, user_password):
-    context.inventory_page.open_inventory_page()
-    context.inventory_page.insert_username(username)
-    context.inventory_page.insert_password(user_password)
-    context.inventory_page.click_login_button()
+    context.login_page.open_login_page()
+    context.login_page.insert_username(username)
+    context.login_page.insert_password(user_password)
+    context.login_page.click_login_button()
+
 
 
 @when('I click on the sort button')
@@ -49,11 +52,6 @@ def step_impl(context):
     context.main_page.i_click_on_the_option_name_Z_to_A()
 
 
-@then('I see the website logo displayed')
-def step_impl(context):
-    context.main_page.the_logo_is_displayed()
-
-
 @when('I click on the option Add to cart')
 def step_impl(context):
     context.main_page.i_click_on_the_add_to_cart_button()
@@ -83,30 +81,25 @@ def step_impl(context):
 def step_impl(context):
     context.main_page.i_click_on_the_checkout_button()
 
-
-@when('I introduce the first name')
-def step_impl(context):
-    context.main_page.the_first_name_is_inserted()
-
-
-@when('I introduce the last name')
-def step_impl(context):
-    context.main_page.the_last_name_is_inserted()
+sleep(20)
+@when('I introduce the first name "{first_name}"')
+def step_impl(context, first_name):
+    context.main_page.the_first_name_is_inserted(first_name)
 
 
-@when('I introduce the zip/postal code')
-def step_impl(context):
-    context.main_page.the_postal_code_is_inserted()
 
 
-@when('I introduce only the first and last name')
-def step_impl(context):
-    context.main_page.the_message_error_postal_code_is_required_is_shown()
+
+@when('I introduce the zip/postal code "{postal_code}"')
+def step_impl(context, postal_code):
+    context.main_page.the_postal_code_is_inserted(postal_code)
 
 
-@when('I do not introduce the zip/postal code')
-def step_impl(context):
-    context.main_page.the_message_error_postal_code_is_required_is_shown()
+@when('I introduce the first and last name, "{first_name}" and "{last_name}"')
+def step_impl(context, first_name, last_name):
+    context.base_page.the_first_name_is_inserted(first_name)
+    context.base_page.the_last_name_is_inserted(last_name)
+
 
 
 @when('I click on the continue button')
@@ -129,31 +122,6 @@ def step_impl(context):
     context.main_page.i_click_on_the_back_to_products_button()
 
 
-@when('I do not introduce the first name')
-def step_impl(context):
-    context.main_page.the_message_error_first_name_is_required_is_shown()
-
-
-@when('I do not introduce the last name')
-def step_impl(context):
-    context.main_page.the_message_error_last_name_is_required_is_shown()
-
-
-@when('I do not introduce the zip/postal code ')
-def step_impl(context):
-    context.main_page.the_message_error_postal_code_is_required_is_shown()
-
-
-@when('I introduce only the first name')
-def step_impl(context):
-    context.main_page.the_message_error_last_name_is_required_is_shown()
-
-
-@then('I receive a error "{error_message}"')
-def step_impl(context, error_message):
-    context.main_page.error_message_is_displayed(error_message)
-
-
 @when('I click on the continue shopping button')
 def step_impl(context):
     context.main_page.i_click_on_the_continue_shopping_button()
@@ -174,6 +142,11 @@ def step_impl(context):
     context.main_page.i_click_on_the_option_name_A_to_Z()
 
 
+@then('Items are sorted from Z to A')
+def step_impl(context):
+    context.main_page.i_click_on_the_option_name_Z_to_A()
+
+
 @then('I see the website logo displayed')
 def step_impl(context):
     context.main_page.the_logo_is_displayed()
@@ -182,6 +155,28 @@ def step_impl(context):
 @then('The item is removed from cart')
 def step_impl(context):
     context.main_page.the_product_is_removed_from_cart()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
