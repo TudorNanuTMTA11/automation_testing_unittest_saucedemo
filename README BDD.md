@@ -59,7 +59,7 @@ saucedemo_main_page.feature.py -> test file contains feature, tests which are st
 
 for realising different purchases
 
-inventory_page.py -> contains methods and functions which are used for allowing the tests for accesing the website to work and a class 
+login_page.py -> contains methods and functions which are used for allowing the tests for accesing the website to work and a class 
 
 which contains the speciffic selectors
 
